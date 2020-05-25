@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D3 Example</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 250px;
+      border: 1px solid blueviolet;
+    }
+    
+    .bar {
+      fill: #69b3a2;
+    }
+
+    .d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 2px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+  </style>
+  <script src="https://d3js.org/d3.v5.min.js" defer></script>
+  <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+  <script src="bar.js" defer></script>
+	
+</head>
+<body>
+  <div class="container" id="bar_chart"></div>
+<!-- <svg></svg> -->
+<!-- <script>
+
+
+d3.csv("./test.csv",
+  function(data, i) {
+    return {
+      age : data.Age,
+      gender : data.Gender
+    };
+  })
+  .then(data => {
+    render(data);
+  })
+
+const render = data => {
+	console.log(data);
+};
+
+</script> -->
+</body>
+</html>

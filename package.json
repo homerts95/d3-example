@@ -1,0 +1,23 @@
+{
+  "name": "awesomevizapp",
+  "version": "1.0.0",
+  "description": "D3 examples",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackoverflow-viz-app/d3-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stackoverflow-viz-app/d3-example/issues"
+  },
+  "homepage": "https://github.com/stackoverflow-viz-app/d3-example#readme"
+}
