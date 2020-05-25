@@ -4,6 +4,7 @@
   "description": "D3 examples",
   "main": "index.js",
   "dependencies": {
+    "ecstatic": "^4.1.4",
     "http-server": "^0.12.3"
   },
   "devDependencies": {},
