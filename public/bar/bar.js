@@ -7,7 +7,7 @@ const container = d3.select('#bar_chart')
               .attr("width", width + margin)
               .attr("height", height + margin);
 
-d3.csv("./data/sample_10.csv",
+d3.csv("../data/sample_10.csv",
   function(data, i) {
     return {
       age : data.Age,
@@ -28,9 +28,8 @@ d3.csv("./data/sample_10.csv",
       }
     });
 
-    const maxValue = plotData.reduce((prev, current) => (prev.value > current.value) ? prev : current);
-    const xScale = d3.scaleBand().domain(plotData.map((d) => d.gender)).rangeRound([0, width]).padding(0.1);
-    const yScale = d3.scaleLinear().domain([0, maxValue.value + 1]).range([height, 0]);
+     const xScale = d3.scaleBand().domain(plotData.map((d) => d.gender)).rangeRound([0, width]).padding(0.1);
+    const yScale = d3.scaleLinear().domain([0, d3.max(plotData, d => d.value)+ 1]).range([height, 0]);
 
     container.append("g") 
               .attr("transform", "translate(0,250)")
